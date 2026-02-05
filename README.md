@@ -61,59 +61,76 @@ It enables students to **discover clubs, join them, view events, and apply for r
 - **Mongoose**
 
 ---
+# 🎓 Campus Connect
 
-🧱 Architecture
+Campus Connect is a streamlined platform designed to bridge the gap between students and campus organizations. It allows for seamless club management, recruitment tracking, and portal access.
 
-Frontend (React + Vite)
-→ REST API (JSON)
-→ Backend (Node.js + Express)
-→ Database (MongoDB)
+---
 
-🚀 Getting Started
-Prerequisites
+## 🧱 Architecture
 
-Node.js (v16 or higher)
+The application is built using the **MERN** stack (MongoDB, Express, React, Node.js):
 
-MongoDB (local or MongoDB Atlas)
+* **Frontend:** React + Vite
+* **API:** RESTful JSON API
+* **Backend:** Node.js + Express
+* **Database:** MongoDB
 
-Git
+---
 
-1️⃣ Clone the repository
+## 🚀 Getting Started
 
-git clone https://github.com/ayaan193/campus-connect.git
+### Prerequisites
+* **Node.js** (v16 or higher)
+* **MongoDB** (Local instance or MongoDB Atlas)
+* **Git**
+---
 
+### 1️⃣ Clone the Repository
+```bash
+git clone [https://github.com/ayaan193/campus-connect.git](https://github.com/ayaan193/campus-connect.git)
 cd campus-connect
+```
 
-2️⃣ Install dependencies
-
+### 2️⃣ Install dependencies
+```
 npm install
-
-3️⃣ Environment Variables
+```
+### 3️⃣ Environment Variables
 
 Create a .env file in the root directory:
-
+```bash
 MONGO_URI=mongodb://localhost:27017/campusconnect
 JWT_SECRET=your_secret_key_here
 PORT=5000
+```
 
 ⚠️ Do not commit the .env file to GitHub.
 
-4️⃣ Run the backend server
+### 4️⃣ Run the backend server
 
+```bash
 node server.js
-
+```
 Backend runs at:
+```bash
 http://localhost:5000
+```
 
-5️⃣ Run the frontend
-
+### 5️⃣ Run the frontend
+```bash
 npm run dev
+```
 
 Frontend runs at:
+```bash
 http://localhost:5173
+```
+---
 
-📁 Project Structure
+### 📁 Project Structure
 
+```plaintext
 campus-connect/
 ├── src/ # React frontend
 │ ├── ClubPortal.jsx
@@ -126,24 +143,29 @@ campus-connect/
 ├── .env # Environment variables (ignored)
 ├── .gitignore
 └── README.md
+```
+---
 
-🔮 Future Enhancements
+### 🔮 Future Enhancements
 
-Email notifications for recruitment updates
+- Email notifications for recruitment updates
 
-Event attendance tracking
+- Event attendance tracking
 
-Admin analytics dashboard
+- Admin analytics dashboard
 
-UI enhancement using Tailwind CSS
+- UI enhancement using Tailwind CSS
 
-Approval workflow for club registrations
+- Approval workflow for club registrations
+---
 
-👨‍💻 Author
+### 👨‍💻 Author
 
-Ayaan Ahmed
-GitHub: https://github.com/ayaan193
+- Ayaan Ahmed
+- GitHub: https://github.com/ayaan193
 
-📜 License
+---
 
-This project is open-source and intended for educational and learning purposes.
+### 📜 License
+
+- This project is open-source and intended for educational and learning purposes.
