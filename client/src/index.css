@@ -1,0 +1,157 @@
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  /* Prefer readable dark text by default */
+  color-scheme: light dark;
+  color: #111;                 /* dark page text */
+  background-color: #f6f0fb;   /* soft purple background */
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  font-weight: 500;
+  color: #3b2bd9;
+  text-decoration: none;
+}
+a:hover {
+  color: #2f24b8;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background-color: var(--bg, #f6f0fb);
+  color: #111;
+  -webkit-font-smoothing: antialiased;
+  display: block;
+}
+
+/* Headings */
+h1, h2, h3 {
+  color: #2a0f6b;
+  margin: 0 0 12px 0;
+}
+
+/* Buttons - styled to match screenshots */
+button {
+  border-radius: 10px;
+  border: none;
+  padding: 10px 16px;
+  font-size: 1rem;
+  font-weight: 600;
+  font-family: inherit;
+  cursor: pointer;
+  background-color: #1a0f6b; /* deep purple */
+  color: #fff;              /* label color on buttons */
+  box-shadow: 0 6px 0 rgba(0,0,0,0.18);
+}
+button:hover { opacity: 0.95; }
+button:disabled { opacity: 0.6; cursor: not-allowed; }
+
+/* Form inputs */
+input, textarea, select {
+  width: 100%;
+  padding: 12px 14px;
+  border-radius: 8px;
+  border: none;
+  background: #2b2b2b;      /* dark input background you had */
+  color: #fff;              /* keep placeholder white inside dark input */
+  box-sizing: border-box;
+}
+input::placeholder, textarea::placeholder { color: rgba(255,255,255,0.7); }
+
+/* Small muted text style used in event cards */
+.muted { color: rgba(0,0,0,0.7); }
+
+/* Utility */
+.card { background: #fff; border-radius: 12px; padding: 16px; box-shadow: 0 6px 20px rgba(0,0,0,0.06); }
+
+/* Responsive container spacing */
+.main { padding: 28px; max-width: 1200px; margin: 80px auto 120px; }
+
+/* Navbar space reserved for fixed header */
+.navbar.fixed { position: fixed; top: 0; left: 0; right: 0; height: 64px; background: #4a22d3; color: #fff; display: flex; align-items: center; padding: 0 22px; z-index: 20; }
+.logo { font-weight: 800; color: #fff; }
+.nav-links a { margin: 0 12px; color: rgba(255,255,255,0.95); }
+.profile-area { margin-left: auto; display:flex; gap:12px; align-items:center; }
+
+/* page-title */
+.page-title { font-size: 2.2rem; margin-bottom: 14px; color: #2a0f6b; }
+
+/* filters row */
+.filters { display:flex; gap:10px; align-items:center; margin-bottom: 22px; }
+.search-input { flex: 1; padding: 12px 14px; border-radius: 8px; border: none; background: #fff; color: #111; }
+
+/* main grid */
+.grid { display: grid; grid-template-columns: 320px 1fr; gap: 24px; align-items: start; }
+
+/* Clubs column */
+.clubs { }
+.club-card { background: rgba(255,255,255,0.95); border-radius: 10px; padding: 12px; margin-bottom: 14px; }
+
+/* Events column */
+.events { }
+
+/* event grid (cards row) */
+.event-grid { display:flex; gap: 20px; align-items: stretch; flex-wrap: wrap; }
+
+/* event card */
+.event-card {
+  background: linear-gradient(180deg, #6f3ae6 0%, #4f17c2 100%);
+  color: #fff;
+  width: 260px;
+  border-radius: 12px;
+  padding: 22px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+  display:flex;
+  flex-direction:column;
+  justify-content: space-between;
+}
+.event-card .event-title { font-weight: 700; margin: 6px 0 10px; color: #fff; }
+.event-card .event-desc { opacity: 0.95; margin-bottom: 12px; }
+
+/* Register button inside card - make it black as screenshot */
+.event-card button {
+  background: #0f0f0f;
+  color: #fff;
+  padding: 12px 14px;
+  border-radius: 10px;
+  box-shadow: none;
+  margin-top: 16px;
+}
+
+/* Registration page / form */
+.register-page { padding: 40px 0; }
+.register-container {
+  max-width: 720px;
+  margin: 24px auto;
+  background: #fff;
+  border-radius: 12px;
+  padding: 26px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
+.register-form label { display:block; margin-top: 12px; color: #3b2bd9; font-weight:600; }
+.row { display:flex; gap: 12px; margin-top: 8px; }
+.row > div { flex: 1; }
+
+/* Form action buttons */
+.register-actions { display:flex; gap:12px; margin-top: 18px; }
+.cancel-btn { background: transparent; color: #333; border: 2px solid #eee; }
+.confirm-btn { background: #1a0f6b; color: #fff; }
+
+/* small error text */
+.error-text { color: #b00020; margin-top: 8px; }
+
+/* mobile */
+@media (max-width: 880px) {
+  .grid { grid-template-columns: 1fr; }
+  .event-grid { justify-content: center; }
+  .navbar.fixed { height: auto; padding: 14px 16px; position: relative; }
+}

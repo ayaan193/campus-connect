@@ -1,0 +1,79 @@
+/* src/styles.css - component & portal styles */
+
+/* General card used in many places */
+.card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 16px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+}
+
+/* Centering wrapper for portal */
+.centered-portal {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 80px 16px;
+}
+
+/* Portal card */
+.portal-card {
+  width: 520px;
+  max-width: calc(100% - 32px);
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* Forms inside portal */
+.club-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 8px;
+}
+.club-form input,
+.club-form textarea,
+.club-form select {
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1px solid #e6e6e6;
+  font-size: 0.95rem;
+  box-sizing: border-box;
+  width: 100%;
+}
+.club-form textarea { min-height: 80px; resize: vertical; }
+
+/* Buttons inside portal */
+.portal-card button {
+  border-radius: 8px;
+  padding: 10px 12px;
+  background: #4a22d3;
+  color: #fff;
+  border: none;
+  font-weight: 700;
+  cursor: pointer;
+}
+.portal-card button.active {
+  background: #2e0fb3;
+}
+
+/* small visual fixes for labels / messages */
+.portal-card label {
+  display: block;
+  margin-top: 6px;
+  font-size: 0.9rem;
+  color: #333;
+}
+
+/* make auth card consistent with rest of UI */
+.auth-card input {
+  margin: 8px 0;
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1px solid #e6e6e6;
+}
+
+/* small responsive tweaks */
+@media (max-width: 640px) {
+  .portal-card { width: 100%; padding: 14px; }
+}

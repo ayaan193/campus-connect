@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <h2>Create Event</h2>
+    <button id="btn">Create Test Event</button>
+    <pre id="out"></pre>
+    <script>
+      const BASE_URL = (new URL(document.currentScript.src || "", window.location.href).origin) || "http://localhost:5000";
+      document.getElementById("btn").onclick = async () => {
+        const token = localStorage.getItem("token");
+        if (!token) {
+          document.getElementById("out").textContent = "No token found in localStorage. Login in the app first.";
+          return;
+        }
+        try {
+          const res = await fetch("http://localhost:5000/api/events", {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+              "Authorization": `Bearer ${token}`
+            },
+            body: JSON.stringify({
+              title: "Tiny Brains Recursive Gains",
+              description: "AURA club",
+              date: "2025-11-10T14:00:00.000Z",
+              location: "1B audi",
+              maxAttendees: 250
+            })
+          });
+          const body = await res.text();
+          document.getElementById("out").textContent = body;
+        } catch (err) {
+          document.getElementById("out").textContent = "Error: " + err.message;
+        }
+      };
+    </script>
+  </body>
+</html>
