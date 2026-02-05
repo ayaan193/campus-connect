@@ -62,16 +62,12 @@ It enables students to **discover clubs, join them, view events, and apply for r
 
 ---
 
-## 🧱 Architecture
+🧱 Architecture
 
 Frontend (React + Vite)
-|
-| REST API (JSON)
-v
-Backend (Node.js + Express)
-|
-v
-Database (MongoDB)
+→ REST API (JSON)
+→ Backend (Node.js + Express)
+→ Database (MongoDB)
 
 🚀 Getting Started
 Prerequisites
